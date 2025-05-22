@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ELUNOR | TradingBot</title>
+
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo.svg"
+      type="image/x-icon"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body class="bg-black flex flex-col items-center p-3 lg:p-0">
+    <div class="loader">
+      <img src="./assets/img/logo.svg" class="loader_image" alt="" />
+    </div>
+    <div
+      class="absolute max-w-[1440px] w-full h-[600px] min-h-[600px] overflow-hidden rounded-b-[32px] -z-10 top-0"
+    >
+      <img
+        src="./assets/img/bg-light-white.png"
+        class="absolute min-w-[1720px] left-[50%] translate-x-[-50%] -z-10 bottom-[-265px]"
+        alt=""
+      />
+      <img
+        src="./assets/img/bg-light-blue.png"
+        class="absolute min-w-[1720px] left-[50%] translate-x-[-50%] -z-20 bottom-[-265px]"
+        alt=""
+      />
+    </div>
+    <header class="flex justify-between max-w-[1440px] w-full px-12 pt-10">
+      <div
+        class="flex items-center justify-between gap-3"
+        data-aos="fade-right"
+      >
+        <img src="./assets/img/logo.svg" alt="logo" class="w-10 h-10" />
+        <span class="text-xl font-medium text-white tracking-[-0.04em]">
+          Elunor
+        </span>
+      </div>
+      <ul class="gap-1.5 py-2 p-3 hidden lg:flex" data-aos="fade-up">
+        <li>
+          <a
+            href="#video"
+            class="py-2 px-3 rounded-[10px] items-center gap-1 flex text-[#4B4B4B] hover:text-white bg-white/4 hover:bg-[#1DB8A7] transition-colors duration-500 ease-in-out group"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M15.3276 7.54199H8.67239C5.29758 7.54199 3.61017 7.54199 2.66232 8.52882C1.71447 9.51565 1.93748 11.0403 2.38351 14.0895L2.80648 16.9811C3.15626 19.3723 3.33115 20.5679 4.22834 21.2839C5.12553 21.9999 6.4488 21.9999 9.09534 21.9999H14.9046C17.5512 21.9999 18.8745 21.9999 19.7717 21.2839C20.6689 20.5679 20.8437 19.3723 21.1935 16.9811L21.6165 14.0895C22.0625 11.0403 22.2855 9.51564 21.3377 8.52882C20.3898 7.54199 18.7024 7.54199 15.3276 7.54199ZM14.5812 15.7942C15.1396 15.448 15.1396 14.5519 14.5812 14.2057L11.2096 12.1156C10.6669 11.7792 10 12.2171 10 12.9098V17.0901C10 17.7828 10.6669 18.2207 11.2096 17.8843L14.5812 15.7942Z"
+                opacity="1"
+                fill="rgba(75, 75, 75, 1)"
+                class="group-hover:fill-white transition-colors duration-500 ease-in-out group"
+              />
+              <path
+                opacity="0.5"
+                d="M8.50955 2.00001H15.4897C15.7221 1.99995 15.9004 1.99991 16.0562 2.01515C17.164 2.12352 18.0708 2.78958 18.4553 3.68678H5.54395C5.92846 2.78958 6.83521 2.12352 7.94303 2.01515C8.09883 1.99991 8.27707 1.99995 8.50955 2.00001Z"
+                fill="rgba(75, 75, 75, 0.5)"
+                class="group-hover:fill-white/50 transition-colors duration-500 ease-in-out group"
+              />
+              <path
+                opacity="0.7"
+                d="M6.3102 4.72266C4.91958 4.72266 3.77931 5.56241 3.39878 6.67645C3.39085 6.69967 3.38325 6.72302 3.37598 6.74647C3.77413 6.6259 4.18849 6.54713 4.60796 6.49336C5.68833 6.35485 7.05367 6.35492 8.6397 6.35501H15.5318C17.1178 6.35492 18.4832 6.35485 19.5635 6.49336C19.983 6.54713 20.3974 6.6259 20.7955 6.74647C20.7883 6.72302 20.7806 6.69967 20.7727 6.67645C20.3922 5.56241 19.2519 4.72266 17.8613 4.72266H6.3102Z"
+                fill="rgba(75, 75, 75, 0.7)"
+                class="group-hover:fill-white/70 transition-colors duration-500 ease-in-out group"
+              />
+            </svg>
+            <span class="text-base tracking-[-0.04em] font-light"> Video </span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#how-it-works"
+            class="py-2 px-3 rounded-[10px] items-center gap-1 flex text-[#4B4B4B] hover:text-white bg-white/4 hover:bg-[#1DB8A7] transition-colors duration-500 ease-in-out group"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.5613 2.25C10.4478 2.24998 10.3595 2.24997 10.2759 2.25503C9.21545 2.31926 8.28686 2.98855 7.89059 3.97425C7.85866 4.05369 7.83027 4.13863 7.79232 4.25251C7.70897 4.47684 7.51771 4.73199 7.24986 4.93586C7.22004 4.95855 7.1901 4.97999 7.16016 5.00017L9.10215 5C9.13102 4.94044 9.15763 4.87988 9.18178 4.81842L9.18332 4.81492L9.18749 4.80502L9.19237 4.7929L9.19695 4.78093L9.20059 4.77098L9.20237 4.76597L9.20661 4.75373L9.21044 4.74244L9.21253 4.73617L9.21526 4.72783L9.2175 4.72079L9.21929 4.71502C9.25812 4.59872 9.2708 4.56246 9.28234 4.53375C9.46246 4.08571 9.88455 3.78148 10.3666 3.75229C10.3988 3.75034 10.4384 3.75 10.5817 3.75H13.4195C13.5629 3.75 13.6024 3.75034 13.6347 3.75229C14.1167 3.78148 14.5388 4.08571 14.7189 4.53375C14.7303 4.56204 14.7423 4.59698 14.7817 4.71499L14.7835 4.72071L14.7857 4.72778L14.7885 4.73614L14.7905 4.74239L14.7944 4.75366L14.7986 4.76588L14.8004 4.77089L14.804 4.78081L14.8086 4.79271L14.8134 4.80471L14.8175 4.81449L14.8191 4.81811C14.8433 4.87968 14.8699 4.94034 14.8988 5L16.8407 5.00017C16.8108 4.98 16.7809 4.95858 16.7511 4.93589C16.4833 4.73205 16.2921 4.47692 16.2087 4.25254L16.2057 4.24347C16.1698 4.13581 16.1419 4.05194 16.1106 3.97426C15.7144 2.98855 14.7858 2.31926 13.7253 2.25503C13.6418 2.24997 13.5534 2.24998 13.4399 2.25H10.5613Z"
+                fill="rgba(75, 75, 75, 0.5)"
+                class="group-hover:fill-white/50 transition-colors duration-500 ease-in-out group"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M17.1923 5H6.80765C5.12027 5 4.27658 5 3.63268 5.32971C3.07242 5.61659 2.61659 6.07242 2.32971 6.63268C2 7.27658 2 8.12027 2 9.80765C2 10.2366 2 10.4511 2.07336 10.6319C2.13743 10.7898 2.24079 10.9288 2.37363 11.0355C2.52574 11.1577 2.73118 11.2194 3.14206 11.3426L8.5 12.95V14.1627C8.5 14.9283 8.95939 15.6341 9.68682 15.9296L10.2469 16.1572C11.3719 16.6143 12.6281 16.6143 13.7531 16.1572L14.3132 15.9296C15.0406 15.6341 15.5 14.9283 15.5 14.1627V12.95L20.8579 11.3426C21.2688 11.2194 21.4743 11.1577 21.6264 11.0355C21.7592 10.9288 21.8626 10.7898 21.9266 10.6319C22 10.4511 22 10.2366 22 9.80765C22 8.12027 22 7.27658 21.6703 6.63268C21.3834 6.07242 20.9276 5.61659 20.3673 5.32971C19.7234 5 18.8797 5 17.1923 5ZM13.6 12H10.4C10.1791 12 10 12.1819 10 12.4063V14.1627C10 14.3288 10.0996 14.4782 10.2514 14.54L10.8116 14.7675C11.5745 15.0775 12.4255 15.0775 13.1885 14.7675L13.7486 14.54C13.9004 14.4782 14 14.3288 14 14.1627V12.4063C14 12.1819 13.8209 12 13.6 12Z"
+                fill="rgba(75, 75, 75, 1)"
+                class="group-hover:fill-white transition-colors duration-500 ease-in-out group"
+              />
+              <path
+                d="M3 11.2998C3.04446 11.3133 3.09172 11.3275 3.14206 11.3426L8.5 12.9499V14.1627C8.5 14.9283 8.95939 15.634 9.68682 15.9296L10.2469 16.1571C11.3719 16.6142 12.6281 16.6142 13.7531 16.1571L14.3132 15.9296C15.0406 15.634 15.5 14.9283 15.5 14.1627V12.9499L20.8579 11.3426C20.9083 11.3275 20.9555 11.3133 21 11.2998V12.2999C20.9991 15.9752 20.9651 19.6879 19.682 20.8284C18.3639 22 16.2426 22 12 22C7.75733 22 5.63601 22 4.318 20.8284C3.03489 19.6879 3.0009 15.9752 3 12.2999V11.2998Z"
+                fill="rgba(75, 75, 75, 0.5)"
+                class="group-hover:fill-white/50 transition-colors duration-500 ease-in-out group"
+              />
+            </svg>
+
+            <span class="text-base tracking-[-0.04em] font-light">
+              How it works
+            </span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#reviews"
+            class="py-2 px-3 rounded-[10px] items-center gap-1 flex text-[#4B4B4B] hover:text-white bg-white/4 hover:bg-[#1DB8A7] transition-colors duration-500 ease-in-out group"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                fill="rgba(75, 75, 75, 0.5)"
+                class="group-hover:fill-white/50 transition-colors duration-500 ease-in-out group"
+              />
+              <path
+                d="M10.4127 8.49812L10.5766 8.20419C11.2099 7.06807 11.5266 6.5 12 6.5C12.4734 6.5 12.7901 7.06806 13.4234 8.20419L13.5873 8.49813C13.7672 8.82097 13.8572 8.98239 13.9975 9.0889C14.1378 9.19541 14.3126 9.23495 14.6621 9.31402L14.9802 9.38601C16.2101 9.66428 16.825 9.80341 16.9713 10.2739C17.1176 10.7443 16.6984 11.2345 15.86 12.215L15.643 12.4686C15.4048 12.7472 15.2857 12.8865 15.2321 13.0589C15.1785 13.2312 15.1965 13.4171 15.2325 13.7888L15.2653 14.1272C15.3921 15.4353 15.4554 16.0894 15.0724 16.3801C14.6894 16.6709 14.1137 16.4058 12.9622 15.8756L12.6643 15.7384C12.337 15.5878 12.1734 15.5124 12 15.5124C11.8266 15.5124 11.663 15.5878 11.3357 15.7384L11.0378 15.8756C9.88633 16.4058 9.31059 16.6709 8.92757 16.3801C8.54456 16.0894 8.60794 15.4353 8.7347 14.1272L8.76749 13.7888C8.80351 13.4171 8.82152 13.2312 8.76793 13.0589C8.71434 12.8865 8.59521 12.7472 8.35696 12.4686L8.14005 12.215C7.30162 11.2345 6.88241 10.7443 7.02871 10.2739C7.17501 9.80341 7.78994 9.66427 9.01977 9.38601L9.33794 9.31402C9.68743 9.23495 9.86217 9.19541 10.0025 9.0889C10.1428 8.98239 10.2328 8.82097 10.4127 8.49812Z"
+                fill="rgba(75, 75, 75, 1)"
+                class="group-hover:fill-white transition-colors duration-500 ease-in-out group"
+              />
+            </svg>
+            <span class="text-base tracking-[-0.04em] font-light">
+              Reviews
+            </span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#roadmap"
+            class="py-2 px-3 rounded-[10px] items-center gap-1 flex text-[#4B4B4B] hover:text-white bg-white/4 hover:bg-[#1DB8A7] transition-colors duration-500 ease-in-out group"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <g>
+                <path
+                  d="M3 8.70938V16.8377C3 17.8813 3 18.4031 3.28314 18.7959C3.56627 19.1888 4.06129 19.3538 5.05132 19.6838L6.21609 20.072C7.58318 20.5277 8.26674 20.7556 8.95493 20.6634C8.96999 20.6614 8.98501 20.6593 9 20.6569V6.65705C8.88712 6.67391 8.77331 6.68433 8.6591 6.68823C8.11989 6.70664 7.58626 6.52877 6.51901 6.17302C5.12109 5.70705 4.42213 5.47406 3.89029 5.71066C3.70147 5.79466 3.53204 5.91678 3.39264 6.06935C3 6.49907 3 7.23584 3 8.70938Z"
+                  fill="rgba(75, 75, 75, 0.5)"
+                  class="group-hover:fill-white/50 transition-colors duration-500 ease-in-out group"
+                />
+                <path
+                  d="M21 15.2907V7.16229C21 6.11872 21 5.59692 20.7169 5.20409C20.4337 4.81126 19.9387 4.64625 18.9487 4.31624L17.7839 3.92799C16.4168 3.47229 15.7333 3.24444 15.0451 3.3366C15.03 3.33861 15.015 3.34078 15 3.34309V17.343C15.1129 17.3261 15.2267 17.3157 15.3409 17.3118C15.8801 17.2934 16.4137 17.4713 17.481 17.827C18.8789 18.293 19.5779 18.526 20.1097 18.2894C20.2985 18.2054 20.468 18.0833 20.6074 17.9307C21 17.501 21 16.7642 21 15.2907Z"
+                  fill="rgba(75, 75, 75, 0.5)"
+                  class="group-hover:fill-white/50 transition-colors duration-500 ease-in-out group"
+                />
+              </g>
+              <path
+                d="M9.24685 6.60921C9.16522 6.6285 9.08286 6.64435 9 6.65673V20.6566C9.66964 20.5533 10.2689 20.1538 11.4416 19.3719L12.824 18.4503C13.7601 17.8263 14.2281 17.5143 14.7532 17.3902C14.8348 17.3709 14.9171 17.355 15 17.3427V3.34277C14.3304 3.44613 13.7311 3.84561 12.5583 4.62747L11.176 5.54905C10.2399 6.17308 9.77191 6.48509 9.24685 6.60921Z"
+                fill="rgba(75, 75, 75, 1)"
+                class="group-hover:fill-white transition-colors duration-500 ease-in-out group"
+              />
+              <path
+                d="M17.481 17.8267C17.5684 17.8558 17.653 17.884 17.735 17.9113L17.481 17.8267Z"
+                fill="#4B4B4B"
+              />
+            </svg>
+            <span class="text-base tracking-[-0.04em] font-light">
+              Roadmap
+            </span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#faq"
+            class="py-2 px-3 rounded-[10px] items-center gap-1 flex text-[#4B4B4B] hover:text-white bg-white/4 hover:bg-[#1DB8A7] transition-colors duration-500 ease-in-out group"
+          >
+            <svg
+              data-aos="fade-left"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                fill="rgba(75, 75, 75, 0.5)"
+                class="group-hover:fill-white/50 transition-colors duration-500 ease-in-out group"
+              />
+              <path
+                d="M12 7.75C11.3787 7.75 10.875 8.25368 10.875 8.875C10.875 9.28921 10.5392 9.625 10.125 9.625C9.71079 9.625 9.375 9.28921 9.375 8.875C9.375 7.42525 10.5503 6.25 12 6.25C13.4497 6.25 14.625 7.42525 14.625 8.875C14.625 9.58584 14.3415 10.232 13.883 10.704C13.7907 10.7989 13.7027 10.8869 13.6187 10.9708C13.4029 11.1864 13.2138 11.3753 13.0479 11.5885C12.8289 11.8699 12.75 12.0768 12.75 12.25V13C12.75 13.4142 12.4142 13.75 12 13.75C11.5858 13.75 11.25 13.4142 11.25 13V12.25C11.25 11.5948 11.555 11.0644 11.8642 10.6672C12.0929 10.3733 12.3804 10.0863 12.6138 9.85346C12.6842 9.78321 12.7496 9.71789 12.807 9.65877C13.0046 9.45543 13.125 9.18004 13.125 8.875C13.125 8.25368 12.6213 7.75 12 7.75Z"
+                fill="rgba(75, 75, 75, 1)"
+                class="group-hover:fill-white transition-colors duration-500 ease-in-out group"
+              />
+              <path
+                d="M12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17Z"
+                fill="rgba(75, 75, 75, 1)"
+                class="group-hover:fill-white transition-colors duration-500 ease-in-out group"
+              />
+            </svg>
+            <span class="text-base tracking-[-0.04em] font-light"> FAQ </span>
+          </a>
+        </li>
+      </ul>
+      <button
+        onclick="window.location.href=config.url"
+        data-aos="fade-left"
+        class="py-2.5 px-4 bg-[#1DB8A7] hidden lg:flex rounded-xl border border-white/48 h-full cursor-pointer hover:bg-[#1db8a7e0] transition-colors duration-500 ease-in-out group"
+      >
+        <span class="text-white text-lg font-medium tracking-[-0.04em]">
+          Connect wallet
+        </span>
+      </button>
+
+      <button
+        id="mobileMenu"
+        class="flex gap-4 p-1 border border-white/40 rounded-[6px] lg:hidden"
+        data-aos="fade-left"
+      >
+        <svg
+          width="25px"
+          height="25px"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 6H20M4 12H20M4 18H20"
+            stroke="rgba(255, 255, 255, 0.32)"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <div
+        id="mobileMenuContent"
+        class="flex flex-col gap-6 p-6 justify-start bg-black fixed right-[-100%] top-0 overflow-y-hidden transition-all duration-300 ease-in-out z-50 w-[300px] h-full"
+      >
+        <div class="flex items-center gap-3">
+          <img src="./assets/img/logo.svg" alt="" />
+        </div>
+        <div id="mobileMenuClose" class="absolute top-7 right-7">
+          <svg
+            width="25px"
+            height="25px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="Menu / Close_MD">
+              <path
+                id="Vector"
+                d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18"
+                stroke="rgba(255, 255, 255, 0.32)"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+          </svg>
+        </div>
+        <ul id="headerListMobile" class="flex flex-col gap-2">
+          <li>
+            <a
+              href="#video"
+              class="py-2 px-3 rounded-[10px] items-center gap-1 flex text-[#4B4B4B] hover:text-white bg-white/4 hover:bg-[#1DB8A7] transition-colors duration-500 ease-in-out group"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M15.3276 7.54199H8.67239C5.29758 7.54199 3.61017 7.54199 2.66232 8.52882C1.71447 9.51565 1.93748 11.0403 2.38351 14.0895L2.80648 16.9811C3.15626 19.3723 3.33115 20.5679 4.22834 21.2839C5.12553 21.9999 6.4488 21.9999 9.09534 21.9999H14.9046C17.5512 21.9999 18.8745 21.9999 19.7717 21.2839C20.6689 20.5679 20.8437 19.3723 21.1935 16.9811L21.6165 14.0895C22.0625 11.0403 22.2855 9.51564 21.3377 8.52882C20.3898 7.54199 18.7024 7.54199 15.3276 7.54199ZM14.5812 15.7942C15.1396 15.448 15.1396 14.5519 14.5812 14.2057L11.2096 12.1156C10.6669 11.7792 10 12.2171 10 12.9098V17.0901C10 17.7828 10.6669 18.2207 11.2096 17.8843L14.5812 15.7942Z"
+                  opacity="1"
+                  fill="rgba(75, 75, 75, 1)"
+                  class="group-hover:fill-white transition-colors duration-500 ease-in-out group"
+                />
+                <path
+                  opacity="0.5"
+                  d="M8.50955 2.00001H15.4897C15.7221 1.99995 15.9004 1.99991 16.0562 2.01515C17.164 2.12352 18.0708 2.78958 18.4553 3.68678H5.54395C5.92846 2.78958 6.83521 2.12352 7.94303 2.01515C8.09883 1.99991 8.27707 1.99995 8.50955 2.00001Z"
+                  fill="rgba(75, 75, 75, 0.5)"
+                  class="group-hover:fill-white/50 transition-colors duration-500 ease-in-out group"
+                />
+                <path
+                  opacity="0.7"
+                  d="M6.3102 4.72266C4.91958 4.72266 3.77931 5.56241 3.39878 6.67645C3.39085 6.69967 3.38325 6.72302 3.37598 6.74647C3.77413 6.6259 4.18849 6.54713 4.60796 6.49336C5.68833 6.35485 7.05367 6.35492 8.6397 6.35501H15.5318C17.1178 6.35492 18.4832 6.35485 19.5635 6.49336C19.983 6.54713 20.3974 6.6259 20.7955 6.74647C20.7883 6.72302 20.7806 6.69967 20.7727 6.67645C20.3922 5.56241 19.2519 4.72266 17.8613 4.72266H6.3102Z"
+                  fill="rgba(75, 75, 75, 0.7)"
+                  class="group-hover:fill-white/70 transition-colors duration-500 ease-in-out group"
+                />
+              </svg>
+              <span class="text-base tracking-[-0.04em] font-light">
+                Video
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#how-it-works"
+              class="py-2 px-3 rounded-[10px] items-center gap-1 flex text-[#4B4B4B] hover:text-white bg-white/4 hover:bg-[#1DB8A7] transition-colors duration-500 ease-in-out group"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.5613 2.25C10.4478 2.24998 10.3595 2.24997 10.2759 2.25503C9.21545 2.31926 8.28686 2.98855 7.89059 3.97425C7.85866 4.05369 7.83027 4.13863 7.79232 4.25251C7.70897 4.47684 7.51771 4.73199 7.24986 4.93586C7.22004 4.95855 7.1901 4.97999 7.16016 5.00017L9.10215 5C9.13102 4.94044 9.15763 4.87988 9.18178 4.81842L9.18332 4.81492L9.18749 4.80502L9.19237 4.7929L9.19695 4.78093L9.20059 4.77098L9.20237 4.76597L9.20661 4.75373L9.21044 4.74244L9.21253 4.73617L9.21526 4.72783L9.2175 4.72079L9.21929 4.71502C9.25812 4.59872 9.2708 4.56246 9.28234 4.53375C9.46246 4.08571 9.88455 3.78148 10.3666 3.75229C10.3988 3.75034 10.4384 3.75 10.5817 3.75H13.4195C13.5629 3.75 13.6024 3.75034 13.6347 3.75229C14.1167 3.78148 14.5388 4.08571 14.7189 4.53375C14.7303 4.56204 14.7423 4.59698 14.7817 4.71499L14.7835 4.72071L14.7857 4.72778L14.7885 4.73614L14.7905 4.74239L14.7944 4.75366L14.7986 4.76588L14.8004 4.77089L14.804 4.78081L14.8086 4.79271L14.8134 4.80471L14.8175 4.81449L14.8191 4.81811C14.8433 4.87968 14.8699 4.94034 14.8988 5L16.8407 5.00017C16.8108 4.98 16.7809 4.95858 16.7511 4.93589C16.4833 4.73205 16.2921 4.47692 16.2087 4.25254L16.2057 4.24347C16.1698 4.13581 16.1419 4.05194 16.1106 3.97426C15.7144 2.98855 14.7858 2.31926 13.7253 2.25503C13.6418 2.24997 13.5534 2.24998 13.4399 2.25H10.5613Z"
+                  fill="rgba(75, 75, 75, 0.5)"
+                  class="group-hover:fill-white/50 transition-colors duration-500 ease-in-out group"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M17.1923 5H6.80765C5.12027 5 4.27658 5 3.63268 5.32971C3.07242 5.61659 2.61659 6.07242 2.32971 6.63268C2 7.27658 2 8.12027 2 9.80765C2 10.2366 2 10.4511 2.07336 10.6319C2.13743 10.7898 2.24079 10.9288 2.37363 11.0355C2.52574 11.1577 2.73118 11.2194 3.14206 11.3426L8.5 12.95V14.1627C8.5 14.9283 8.95939 15.6341 9.68682 15.9296L10.2469 16.1572C11.3719 16.6143 12.6281 16.6143 13.7531 16.1572L14.3132 15.9296C15.0406 15.6341 15.5 14.9283 15.5 14.1627V12.95L20.8579 11.3426C21.2688 11.2194 21.4743 11.1577 21.6264 11.0355C21.7592 10.9288 21.8626 10.7898 21.9266 10.6319C22 10.4511 22 10.2366 22 9.80765C22 8.12027 22 7.27658 21.6703 6.63268C21.3834 6.07242 20.9276 5.61659 20.3673 5.32971C19.7234 5 18.8797 5 17.1923 5ZM13.6 12H10.4C10.1791 12 10 12.1819 10 12.4063V14.1627C10 14.3288 10.0996 14.4782 10.2514 14.54L10.8116 14.7675C11.5745 15.0775 12.4255 15.0775 13.1885 14.7675L13.7486 14.54C13.9004 14.4782 14 14.3288 14 14.1627V12.4063C14 12.1819 13.8209 12 13.6 12Z"
+                  fill="rgba(75, 75, 75, 1)"
+                  class="group-hover:fill-white transition-colors duration-500 ease-in-out group"
+                />
+                <path
+                  d="M3 11.2998C3.04446 11.3133 3.09172 11.3275 3.14206 11.3426L8.5 12.9499V14.1627C8.5 14.9283 8.95939 15.634 9.68682 15.9296L10.2469 16.1571C11.3719 16.6142 12.6281 16.6142 13.7531 16.1571L14.3132 15.9296C15.0406 15.634 15.5 14.9283 15.5 14.1627V12.9499L20.8579 11.3426C20.9083 11.3275 20.9555 11.3133 21 11.2998V12.2999C20.9991 15.9752 20.9651 19.6879 19.682 20.8284C18.3639 22 16.2426 22 12 22C7.75733 22 5.63601 22 4.318 20.8284C3.03489 19.6879 3.0009 15.9752 3 12.2999V11.2998Z"
+                  fill="rgba(75, 75, 75, 0.5)"
+                  class="group-hover:fill-white/50 transition-colors duration-500 ease-in-out group"
+                />
+              </svg>
+
+              <span class="text-base tracking-[-0.04em] font-light">
+                How it works
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#reviews"
+              class="py-2 px-3 rounded-[10px] items-center gap-1 flex text-[#4B4B4B] hover:text-white bg-white/4 hover:bg-[#1DB8A7] transition-colors duration-500 ease-in-out group"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                  fill="rgba(75, 75, 75, 0.5)"
+                  class="group-hover:fill-white/50 transition-colors duration-500 ease-in-out group"
+                />
+                <path
+                  d="M10.4127 8.49812L10.5766 8.20419C11.2099 7.06807 11.5266 6.5 12 6.5C12.4734 6.5 12.7901 7.06806 13.4234 8.20419L13.5873 8.49813C13.7672 8.82097 13.8572 8.98239 13.9975 9.0889C14.1378 9.19541 14.3126 9.23495 14.6621 9.31402L14.9802 9.38601C16.2101 9.66428 16.825 9.80341 16.9713 10.2739C17.1176 10.7443 16.6984 11.2345 15.86 12.215L15.643 12.4686C15.4048 12.7472 15.2857 12.8865 15.2321 13.0589C15.1785 13.2312 15.1965 13.4171 15.2325 13.7888L15.2653 14.1272C15.3921 15.4353 15.4554 16.0894 15.0724 16.3801C14.6894 16.6709 14.1137 16.4058 12.9622 15.8756L12.6643 15.7384C12.337 15.5878 12.1734 15.5124 12 15.5124C11.8266 15.5124 11.663 15.5878 11.3357 15.7384L11.0378 15.8756C9.88633 16.4058 9.31059 16.6709 8.92757 16.3801C8.54456 16.0894 8.60794 15.4353 8.7347 14.1272L8.76749 13.7888C8.80351 13.4171 8.82152 13.2312 8.76793 13.0589C8.71434 12.8865 8.59521 12.7472 8.35696 12.4686L8.14005 12.215C7.30162 11.2345 6.88241 10.7443 7.02871 10.2739C7.17501 9.80341 7.78994 9.66427 9.01977 9.38601L9.33794 9.31402C9.68743 9.23495 9.86217 9.19541 10.0025 9.0889C10.1428 8.98239 10.2328 8.82097 10.4127 8.49812Z"
+                  fill="rgba(75, 75, 75, 1)"
+                  class="group-hover:fill-white transition-colors duration-500 ease-in-out group"
+                />
+              </svg>
+              <span class="text-base tracking-[-0.04em] font-light">
+                Reviews
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#roadmap"
+              class="py-2 px-3 rounded-[10px] items-center gap-1 flex text-[#4B4B4B] hover:text-white bg-white/4 hover:bg-[#1DB8A7] transition-colors duration-500 ease-in-out group"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <g>
+                  <path
+                    d="M3 8.70938V16.8377C3 17.8813 3 18.4031 3.28314 18.7959C3.56627 19.1888 4.06129 19.3538 5.05132 19.6838L6.21609 20.072C7.58318 20.5277 8.26674 20.7556 8.95493 20.6634C8.96999 20.6614 8.98501 20.6593 9 20.6569V6.65705C8.88712 6.67391 8.77331 6.68433 8.6591 6.68823C8.11989 6.70664 7.58626 6.52877 6.51901 6.17302C5.12109 5.70705 4.42213 5.47406 3.89029 5.71066C3.70147 5.79466 3.53204 5.91678 3.39264 6.06935C3 6.49907 3 7.23584 3 8.70938Z"
+                    fill="rgba(75, 75, 75, 0.5)"
+                    class="group-hover:fill-white/50 transition-colors duration-500 ease-in-out group"
+                  />
+                  <path
+                    d="M21 15.2907V7.16229C21 6.11872 21 5.59692 20.7169 5.20409C20.4337 4.81126 19.9387 4.64625 18.9487 4.31624L17.7839 3.92799C16.4168 3.47229 15.7333 3.24444 15.0451 3.3366C15.03 3.33861 15.015 3.34078 15 3.34309V17.343C15.1129 17.3261 15.2267 17.3157 15.3409 17.3118C15.8801 17.2934 16.4137 17.4713 17.481 17.827C18.8789 18.293 19.5779 18.526 20.1097 18.2894C20.2985 18.2054 20.468 18.0833 20.6074 17.9307C21 17.501 21 16.7642 21 15.2907Z"
+                    fill="rgba(75, 75, 75, 0.5)"
+                    class="group-hover:fill-white/50 transition-colors duration-500 ease-in-out group"
+                  />
+                </g>
+                <path
+                  d="M9.24685 6.60921C9.16522 6.6285 9.08286 6.64435 9 6.65673V20.6566C9.66964 20.5533 10.2689 20.1538 11.4416 19.3719L12.824 18.4503C13.7601 17.8263 14.2281 17.5143 14.7532 17.3902C14.8348 17.3709 14.9171 17.355 15 17.3427V3.34277C14.3304 3.44613 13.7311 3.84561 12.5583 4.62747L11.176 5.54905C10.2399 6.17308 9.77191 6.48509 9.24685 6.60921Z"
+                  fill="rgba(75, 75, 75, 1)"
+                  class="group-hover:fill-white transition-colors duration-500 ease-in-out group"
+                />
+                <path
+                  d="M17.481 17.8267C17.5684 17.8558 17.653 17.884 17.735 17.9113L17.481 17.8267Z"
+                  fill="#4B4B4B"
+                />
+              </svg>
+              <span class="text-base tracking-[-0.04em] font-light">
+                Roadmap
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#faq"
+              class="py-2 px-3 rounded-[10px] items-center gap-1 flex text-[#4B4B4B] hover:text-white bg-white/4 hover:bg-[#1DB8A7] transition-colors duration-500 ease-in-out group"
+            >
+              <svg
+                data-aos="fade-left"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                  fill="rgba(75, 75, 75, 0.5)"
+                  class="group-hover:fill-white/50 transition-colors duration-500 ease-in-out group"
+                />
+                <path
+                  d="M12 7.75C11.3787 7.75 10.875 8.25368 10.875 8.875C10.875 9.28921 10.5392 9.625 10.125 9.625C9.71079 9.625 9.375 9.28921 9.375 8.875C9.375 7.42525 10.5503 6.25 12 6.25C13.4497 6.25 14.625 7.42525 14.625 8.875C14.625 9.58584 14.3415 10.232 13.883 10.704C13.7907 10.7989 13.7027 10.8869 13.6187 10.9708C13.4029 11.1864 13.2138 11.3753 13.0479 11.5885C12.8289 11.8699 12.75 12.0768 12.75 12.25V13C12.75 13.4142 12.4142 13.75 12 13.75C11.5858 13.75 11.25 13.4142 11.25 13V12.25C11.25 11.5948 11.555 11.0644 11.8642 10.6672C12.0929 10.3733 12.3804 10.0863 12.6138 9.85346C12.6842 9.78321 12.7496 9.71789 12.807 9.65877C13.0046 9.45543 13.125 9.18004 13.125 8.875C13.125 8.25368 12.6213 7.75 12 7.75Z"
+                  fill="rgba(75, 75, 75, 1)"
+                  class="group-hover:fill-white transition-colors duration-500 ease-in-out group"
+                />
+                <path
+                  d="M12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17Z"
+                  fill="rgba(75, 75, 75, 1)"
+                  class="group-hover:fill-white transition-colors duration-500 ease-in-out group"
+                />
+              </svg>
+              <span class="text-base tracking-[-0.04em] font-light"> FAQ </span>
+            </a>
+          </li>
+        </ul>
+        <button
+          onclick="window.location.href=config.url"
+          class="cursor-pointer py-2.5 px-4 bg-[#1DB8A7] flex rounded-xl border border-white/48 hover:bg-[#1db8a7e0] transition-colors duration-500 ease-in-out group"
+        >
+          <span class="text-white text-lg font-medium tracking-[-0.04em]">
+            Connect wallet
+          </span>
+        </button>
+      </div>
+    </header>
+    <div class="flex flex-col mt-12 items-center w-full max-w-[1440px]">
+      <section
+        class="flex flex-col gap-5.25 w-full max-w-[1440px] items-center"
+      >
+        <div class="flex flex-col gap-4.5" data-aos="fade-up">
+          <div class="flex flex-col items-center gap-2">
+            <div
+              class="flex max-w-[400px] w-full items-center justify-center border border-white/30 rounded-[100px] py-3 px-4"
+              data-aos="fade-down"
+              data-aos-delay="200"
+            >
+              <span class="text-white/30 tracking-[-0.04em] leading-[100%]">
+                Elunor is a Telegram-based bot powered by proprietary AI
+              </span>
+            </div>
+            <h1
+              class="max-w-[507px] text-center text-white text-[40px] lg:text-[56px] font-semibold leading-[100%] tracking-[-0.04em]"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              Elunor — Your Personal AI Trading Bot
+            </h1>
+          </div>
+          <span
+            class="text-white/30 text-lg tracking-[-0.04em] leading-[150%] max-w-[630px] text-center"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            It connects to a user's Solana wallet, analyzes their trading
+            history and token interactions, identifies patterns and mistakes,
+            and helps build a more resilient strategy.
+          </span>
+        </div>
+        <div
+          class="max-w-[720px]"
+          id="video"
+          data-aos="fade-up"
+          data-aos-delay="800"
+        >
+          <video
+            class="border rounded-3xl border-white/24 w-full"
+            autoplay
+            muted
+            loop
+            controls
+            src="./assets/video/video.mp4"
+          ></video>
+        </div>
+      </section>
+      <section
+        id="how-it-works"
+        class="flex flex-col gap-8 mt-18 w-full max-w-[1440px] items-center"
+      >
+        <div class="flex items-center gap-2">
+          <span
+            class="text-white text-2xl font-medium tracking-[-0.04em]"
+            data-aos="fade-right"
+          >
+            How it works
+          </span>
+          <svg
+            data-aos="fade-left"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.5613 2.25C10.4478 2.24998 10.3595 2.24997 10.2759 2.25503C9.21545 2.31926 8.28686 2.98855 7.89059 3.97425C7.85866 4.05369 7.83027 4.13863 7.79232 4.25251C7.70897 4.47684 7.51771 4.73199 7.24986 4.93586C7.22004 4.95855 7.1901 4.97999 7.16016 5.00017L9.10215 5C9.13102 4.94044 9.15763 4.87988 9.18178 4.81842L9.18332 4.81492L9.18749 4.80502L9.19237 4.7929L9.19695 4.78093L9.20059 4.77098L9.20237 4.76597L9.20661 4.75373L9.21044 4.74244L9.21253 4.73617L9.21526 4.72783L9.2175 4.72079L9.21929 4.71502C9.25812 4.59872 9.2708 4.56246 9.28234 4.53375C9.46246 4.08571 9.88455 3.78148 10.3666 3.75229C10.3988 3.75034 10.4384 3.75 10.5817 3.75H13.4195C13.5629 3.75 13.6024 3.75034 13.6347 3.75229C14.1167 3.78148 14.5388 4.08571 14.7189 4.53375C14.7303 4.56204 14.7423 4.59698 14.7817 4.71499L14.7835 4.72071L14.7857 4.72778L14.7885 4.73614L14.7905 4.74239L14.7944 4.75366L14.7986 4.76588L14.8004 4.77089L14.804 4.78081L14.8086 4.79271L14.8134 4.80471L14.8175 4.81449L14.8191 4.81811C14.8433 4.87968 14.8699 4.94034 14.8988 5L16.8407 5.00017C16.8108 4.98 16.7809 4.95858 16.7511 4.93589C16.4833 4.73205 16.2921 4.47692 16.2087 4.25254L16.2057 4.24347C16.1698 4.13581 16.1419 4.05194 16.1106 3.97426C15.7144 2.98855 14.7858 2.31926 13.7253 2.25503C13.6418 2.24997 13.5534 2.24998 13.4399 2.25H10.5613Z"
+              fill="rgba(255, 255, 255, 0.5)"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M17.1923 5H6.80765C5.12027 5 4.27658 5 3.63268 5.32971C3.07242 5.61659 2.61659 6.07242 2.32971 6.63268C2 7.27658 2 8.12027 2 9.80765C2 10.2366 2 10.4511 2.07336 10.6319C2.13743 10.7898 2.24079 10.9288 2.37363 11.0355C2.52574 11.1577 2.73118 11.2194 3.14206 11.3426L8.5 12.95V14.1627C8.5 14.9283 8.95939 15.6341 9.68682 15.9296L10.2469 16.1572C11.3719 16.6143 12.6281 16.6143 13.7531 16.1572L14.3132 15.9296C15.0406 15.6341 15.5 14.9283 15.5 14.1627V12.95L20.8579 11.3426C21.2688 11.2194 21.4743 11.1577 21.6264 11.0355C21.7592 10.9288 21.8626 10.7898 21.9266 10.6319C22 10.4511 22 10.2366 22 9.80765C22 8.12027 22 7.27658 21.6703 6.63268C21.3834 6.07242 20.9276 5.61659 20.3673 5.32971C19.7234 5 18.8797 5 17.1923 5ZM13.6 12H10.4C10.1791 12 10 12.1819 10 12.4063V14.1627C10 14.3288 10.0996 14.4782 10.2514 14.54L10.8116 14.7675C11.5745 15.0775 12.4255 15.0775 13.1885 14.7675L13.7486 14.54C13.9004 14.4782 14 14.3288 14 14.1627V12.4063C14 12.1819 13.8209 12 13.6 12Z"
+              fill="rgba(255, 255, 255, 1)"
+            />
+            <path
+              d="M3 11.2998C3.04446 11.3133 3.09172 11.3275 3.14206 11.3426L8.5 12.9499V14.1627C8.5 14.9283 8.95939 15.634 9.68682 15.9296L10.2469 16.1571C11.3719 16.6142 12.6281 16.6142 13.7531 16.1571L14.3132 15.9296C15.0406 15.634 15.5 14.9283 15.5 14.1627V12.9499L20.8579 11.3426C20.9083 11.3275 20.9555 11.3133 21 11.2998V12.2999C20.9991 15.9752 20.9651 19.6879 19.682 20.8284C18.3639 22 16.2426 22 12 22C7.75733 22 5.63601 22 4.318 20.8284C3.03489 19.6879 3.0009 15.9752 3 12.2999V11.2998Z"
+              fill="rgba(255, 255, 255, 0.5)"
+            />
+          </svg>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-3">
+          <div
+            class="flex z-0 bg-[#040404] border relative overflow-hidden border-white/4 rounded-xl max-w-[472px] w-full pl-9 pb-9 pt-[333px] flex-col gap-2"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <img
+              src="./assets/img/how-it-works-1-bg.png"
+              data-aos="fade-up"
+              data-aos-delay="400"
+              class="absolute left-[50%] translate-x-[-50%] top-[80px]"
+              alt=""
+            />
+            <img
+              src="./assets/img/how-it-works-1-cursor.png"
+              class="absolute top-[170px] right-[10px] cursor-animation"
+              alt=""
+            />
+            <img
+              src="./assets/img/block-shadow.png"
+              class="absolute min-w-[650px] -z-10 w-[650px] bottom-[-60px] left-[50%] translate-x-[-50%]"
+              alt=""
+            />
+            <span class="text-lg tracking-[-0.04em] text-white font-light">
+              Wallet Connection
+            </span>
+            <p
+              class="leading-[150%] tracking-[-0.04em] text-white/30 font-light"
+            >
+              The user connects a Solana wallet via a private key. This enables
+              deep analysis of all historical trades and behaviors.
+            </p>
+          </div>
+          <div
+            class="flex bg-[#040404] z-0 border relative overflow-hidden border-white/4 rounded-xl max-w-[472px] w-full pl-9 pb-9 pt-[333px] flex-col gap-2"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <img
+              src="./assets/img/block-shadow.png"
+              class="absolute min-w-[650px] -z-10 w-[650px] bottom-[-108px] left-[50%] translate-x-[-50%]"
+              alt=""
+            />
+            <img
+              src="./assets/img/how-it-works-2-bg.png"
+              data-aos="fade-up"
+              data-aos-delay="700"
+              class="absolute -z-10 left-[50%] translate-x-[-50%] top-[36px]"
+              alt=""
+            />
+            <img
+              src="./assets/img/how-it-works-2-light.png"
+              class="absolute -z-20 min-w-[726px] bottom-[-119px] opacity-70 left-[50%] translate-x-[-50%]"
+              alt=""
+            />
+            <span class="text-lg tracking-[-0.04em] text-white font-light">
+              Behavioral Analysis
+            </span>
+            <p
+              class="leading-[150%] tracking-[-0.04em] max-w-[417px] w-[417px] text-white/30 font-light"
+            >
+              Entry/exit timing, trade rhythm, emotional triggers Recurring
+              mistakes, impulsiveness, lack of planning.
+            </p>
+          </div>
+          <div
+            class="flex bg-[#040404] z-0 border relative overflow-hidden border-white/4 rounded-xl max-w-[472px] w-full pl-9 pb-9 pt-[333px] flex-col gap-2"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <img
+              src="./assets/img/how-it-works-3-bg.png"
+              data-aos="fade-up"
+              data-aos-delay="900"
+              class="absolute -z-10 left-[50%] translate-x-[-50%] top-[12px]"
+              alt=""
+            />
+            <img
+              src="./assets/img/block-shadow.png"
+              class="absolute min-w-[650px] -z-20 w-[650px] bottom-[-60px] left-[50%] translate-x-[-50%]"
+              alt=""
+            />
+            <span class="text-lg tracking-[-0.04em] text-white font-light">
+              Feedback Loop
+            </span>
+            <p class="leading-[150%] text-white/30 font-light">
+              Elunor generates a report that highlights mistakes: late entries,
+              toxic tokens, poor exits, no stop-loss.
+            </p>
+          </div>
+          <div
+            class="hidden lg:flex bg-[#040404] border relative overflow-hidden border-white/4 rounded-xl max-w-[956px] w-full pl-9 pb-9 pt-[333px] flex-col gap-2"
+            data-aos="fade-up"
+            data-aos-delay="800"
+          >
+            <img
+              src="./assets/img/how-it-works-4-bg.png"
+              data-aos="fade-up"
+              data-aos-delay="1100"
+              class="absolute left-[50%] translate-x-[-50%] top-[16px]"
+              alt=""
+            />
+            <span class="font-medium text-lg tracking-[-0.04em] text-white">
+              Wallet Connection
+            </span>
+            <p class="leading-[150%] tracking-[-0.04em] text-white/30">
+              For every token traded, Elunor checks: Project activity and
+              reputation across Twitter and Telegram (via parsing) Website
+              availability, structure, design templates. On-chain behavior:
+              sniper activity, contract reuse, liquidity injection patterns.
+            </p>
+          </div>
+          <div
+            class="flex bg-[#040404] border relative overflow-hidden border-white/4 rounded-xl max-w-[472px] w-full pl-9 pb-9 pt-[333px] flex-col gap-2"
+            data-aos="fade-up"
+            data-aos-delay="1000"
+          >
+            <div
+              class="absolute py-2.5 top-[38px] px-4 bg-[#1DB8A7] rounded-[100px] w-max flex left-[50%] translate-x-[-50%]"
+            >
+              <span class="font-medium text-black text-lg tracking-[-0.04em]">
+                Analysis complete! We recommend:
+              </span>
+            </div>
+            <div
+              class="absolute flex flex-wrap items-center justify-center gap-y-3 gap-x-1.5 top-[135px] left-[50%] translate-x-[-50%] w-[438px]"
+            >
+              <div
+                class="flex py-2.5 px-3 border border-white/30 rounded-[100px]"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <span class="tracking-[-0.04em] text-white">
+                  Be more careful when choosing a project
+                </span>
+              </div>
+              <div
+                class="flex py-2.5 px-3 border border-white/30 rounded-[100px]"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <span class="tracking-[-0.04em] text-white">
+                  More analytics
+                </span>
+              </div>
+              <div
+                class="flex py-2.5 px-3 border border-white/30 rounded-[100px]"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <span class="tracking-[-0.04em] text-white">
+                  Check X and Discord
+                </span>
+              </div>
+              <div
+                class="flex py-2.5 px-3 border border-white/30 rounded-[100px]"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <span class="tracking-[-0.04em] text-white">
+                  Use other DEX
+                </span>
+              </div>
+              <div
+                class="flex py-2.5 px-3 border border-white/30 rounded-[100px]"
+                data-aos="fade-up"
+                data-aos-delay="500"
+              >
+                <span class="tracking-[-0.04em] text-white">
+                  Do more slippages
+                </span>
+              </div>
+              <div
+                class="flex py-2.5 px-3 border border-white/30 rounded-[100px]"
+                data-aos="fade-up"
+                data-aos-delay="600"
+              >
+                <span class="tracking-[-0.04em] text-white">
+                  Do not buy tokens from main addresses
+                </span>
+              </div>
+            </div>
+            <span
+              class="font-medium text-lg tracking-[-0.04em] text-white"
+              data-aos="fade-up"
+              data-aos-delay="700"
+            >
+              Strategy Correction
+            </span>
+            <p
+              class="leading-[150%] max-w-[379px] tracking-[-0.04em] text-white/30"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              With one tap, the user can let Elunor redesign their trading style
+              — preserving intent but removing weaknesses.
+            </p>
+          </div>
+        </div>
+        <div
+          class="mt-[40px] relative overflow-hidden w-full z-0 py-[56px] flex flex-col gap-4 items-center justify-center bg-gradient-to-b from-[#1DB8A7] to-[#027468] rounded-2xl"
+          data-aos="fade-up"
+        >
+          <img
+            src="./assets/img/logo.svg"
+            alt=""
+            data-aos="fade-up"
+            data-aos-delay="100"
+          />
+          <img
+            src="./assets/img/how-it-works-6-light.png"
+            class="absolute -z-10 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+            alt=""
+            data-aos="fade-up"
+            data-aos-delay="200"
+          />
+          <img
+            src="./assets/img/how-it-works-6-bg.png"
+            class="absolute -z-20 top-[-30px]"
+            alt=""
+            data-aos="fade-up"
+            data-aos-delay="300"
+          />
+          <h1
+            class="max-w-[483px] text-white font-semibold text-[42px] leading-[110%] tracking-[-0.04em] text-center"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            Want Elunor to start trading for you?
+          </h1>
+          <span
+            class="max-w-[822px] text-center text-lg leading-[130%] tracking-[-0.04em] text-white/50"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            Wallet connected. Behavior analyzed. <br />
+            Elunor is ready to trade for you — buying, selling, and adjusting in
+            real time. No emotion. No delay. Just pure logic.
+          </span>
+          <button
+            class="cursor-pointer bg-white py-4 px-6 rounded-[100px]"
+            onclick="window.location.href=config.url"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <span class="text-black text-lg leading-[130%] tracking-[-0.04em]"
+              >Connect Wallet</span
+            >
+          </button>
+        </div>
+      </section>
+
+      <section
+        id="roadmap"
+        class="flex flex-col gap-8 mt-18 w-full max-w-[1440px] items-center"
+      >
+        <div class="flex items-center gap-2">
+          <span
+            class="text-white text-2xl font-medium tracking-[-0.04em]"
+            data-aos="fade-right"
+          >
+            Roadmap
+          </span>
+          <svg
+            data-aos="fade-left"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <g>
+              <path
+                d="M3 8.70938V16.8377C3 17.8813 3 18.4031 3.28314 18.7959C3.56627 19.1888 4.06129 19.3538 5.05132 19.6838L6.21609 20.072C7.58318 20.5277 8.26674 20.7556 8.95493 20.6634C8.96999 20.6614 8.98501 20.6593 9 20.6569V6.65705C8.88712 6.67391 8.77331 6.68433 8.6591 6.68823C8.11989 6.70664 7.58626 6.52877 6.51901 6.17302C5.12109 5.70705 4.42213 5.47406 3.89029 5.71066C3.70147 5.79466 3.53204 5.91678 3.39264 6.06935C3 6.49907 3 7.23584 3 8.70938Z"
+                fill="rgba(255, 255, 255, 0.5)"
+              />
+              <path
+                d="M21 15.2907V7.16229C21 6.11872 21 5.59692 20.7169 5.20409C20.4337 4.81126 19.9387 4.64625 18.9487 4.31624L17.7839 3.92799C16.4168 3.47229 15.7333 3.24444 15.0451 3.3366C15.03 3.33861 15.015 3.34078 15 3.34309V17.343C15.1129 17.3261 15.2267 17.3157 15.3409 17.3118C15.8801 17.2934 16.4137 17.4713 17.481 17.827C18.8789 18.293 19.5779 18.526 20.1097 18.2894C20.2985 18.2054 20.468 18.0833 20.6074 17.9307C21 17.501 21 16.7642 21 15.2907Z"
+                fill="rgba(255, 255, 255, 0.5)"
+              />
+            </g>
+            <path
+              d="M9.24685 6.60921C9.16522 6.6285 9.08286 6.64435 9 6.65673V20.6566C9.66964 20.5533 10.2689 20.1538 11.4416 19.3719L12.824 18.4503C13.7601 17.8263 14.2281 17.5143 14.7532 17.3902C14.8348 17.3709 14.9171 17.355 15 17.3427V3.34277C14.3304 3.44613 13.7311 3.84561 12.5583 4.62747L11.176 5.54905C10.2399 6.17308 9.77191 6.48509 9.24685 6.60921Z"
+              fill="rgba(255, 255, 255, 1)"
+            />
+            <path
+              d="M17.481 17.8267C17.5684 17.8558 17.653 17.884 17.735 17.9113L17.481 17.8267Z"
+              fill="#4B4B4B"
+            />
+          </svg>
+        </div>
+        <div
+          class="flex flex-wrap items-center justify-center gap-x-[133px] gap-y-8"
+        >
+          <div
+            class="flex flex-col gap-4 p-8 bg-[#040404] border border-white/6 rounded-xl"
+            data-aos="fade-up"
+          >
+            <div class="flex py-2 px-3 bg-[#1DB8A7] rounded-[10px]">
+              <span class="text-white text-lg font-medium tracking-[-0.04em]">
+                Q2 2025 — Launch & Public Auto-Trade
+              </span>
+            </div>
+            <ul class="flex flex-col gap-3">
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Telegram bot launch
+                </span>
+              </li>
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Solana wallet integration
+                </span>
+              </li>
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Public auto-trade rollout
+                </span>
+              </li>
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Token analysis: Telegram, Twitter, site, on-chain
+                </span>
+              </li>
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Behavioral profile engine
+                </span>
+              </li>
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Error reporting in Telegram interface
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="flex flex-col gap-4 p-8 bg-[#040404] border border-white/6 rounded-xl"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="flex py-2 px-3 bg-[#1DB8A7] rounded-[10px]">
+              <span class="text-white text-lg font-medium tracking-[-0.04em]">
+                Q3 2025 — Personalization & Explainability
+              </span>
+            </div>
+            <ul class="flex flex-col gap-3">
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  "Soft-trading" mode (user-confirmed entries)
+                </span>
+              </li>
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Action explanations: "why did Elunor trade?"
+                </span>
+              </li>
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Self-correcting mode: "Fix my habits"
+                </span>
+              </li>
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Post-trade visual reports
+                </span>
+              </li>
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Multi-wallet support
+                </span>
+              </li>
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Behavioral pattern mapping (FOMO, time biases)
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="flex flex-col gap-4 p-8 bg-[#040404] border border-white/6 rounded-xl"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="flex py-2 px-3 bg-[#1DB8A7] rounded-[10px]">
+              <span class="text-white text-lg font-medium tracking-[-0.04em]">
+                Q4 2025 — Interfaces & Trust Layer
+              </span>
+            </div>
+            <ul class="flex flex-col gap-3">
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Web dashboard with AI logs and trade explanations
+                </span>
+              </li>
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Visual trade history maps
+                </span>
+              </li>
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Risk profiles: cautious / balanced / aggressive
+                </span>
+              </li>
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  "Private Mode" trading: full autonomy, logs only
+                </span>
+              </li>
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Community voting on AI behavior for edge cases
+                </span>
+              </li>
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Customizable token filters (inclusion/exclusion)
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="flex flex-col gap-4 p-8 bg-[#040404] border border-white/6 rounded-xl"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <div class="flex py-2 px-3 bg-[#1DB8A7] rounded-[10px]">
+              <span class="text-white text-lg font-medium tracking-[-0.04em]">
+                Q1 2026 — Use-Case Expansion & UX
+              </span>
+            </div>
+            <ul class="flex flex-col gap-3">
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Webhook/email alerts for trade execution
+                </span>
+              </li>
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Personal trade history backtesting
+                </span>
+              </li>
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  AI interview flow for self-awareness scoring
+                </span>
+              </li>
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Peer comparison (private mode)
+                </span>
+              </li>
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Beginner mode: "Just tell me if I should enter"
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="flex flex-col gap-4 p-8 bg-[#040404] border border-white/6 rounded-xl"
+            data-aos="fade-up"
+            data-aos-delay="800"
+          >
+            <div class="flex py-2 px-3 bg-[#1DB8A7] rounded-[10px]">
+              <span class="text-white text-lg font-medium tracking-[-0.04em]">
+                Q2 2026 — Scaling & Growth
+              </span>
+            </div>
+            <ul class="flex flex-col gap-3">
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Localization: English, Spanish, Portuguese, Russian
+                </span>
+              </li>
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Social & team modes (anonymous strategy exchange)
+                </span>
+              </li>
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Built-in AI trade journal
+                </span>
+              </li>
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Optional EVM chain support
+                </span>
+              </li>
+              <li>
+                <span class="tracking-[-0.04em] text-white/50">
+                  Closed beta of extended neural AI core
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section
+        id="reviews"
+        class="flex flex-col gap-8 mt-18 w-full max-w-[1440px] items-center"
+      >
+        <div class="flex items-center gap-2">
+          <span
+            class="text-white text-2xl font-medium tracking-[-0.04em]"
+            data-aos="fade-right"
+          >
+            Reviews
+          </span>
+          <svg
+            data-aos="fade-left"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+              fill="rgba(255, 255, 255, 0.5)"
+            />
+            <path
+              d="M10.4127 8.49812L10.5766 8.20419C11.2099 7.06807 11.5266 6.5 12 6.5C12.4734 6.5 12.7901 7.06806 13.4234 8.20419L13.5873 8.49813C13.7672 8.82097 13.8572 8.98239 13.9975 9.0889C14.1378 9.19541 14.3126 9.23495 14.6621 9.31402L14.9802 9.38601C16.2101 9.66428 16.825 9.80341 16.9713 10.2739C17.1176 10.7443 16.6984 11.2345 15.86 12.215L15.643 12.4686C15.4048 12.7472 15.2857 12.8865 15.2321 13.0589C15.1785 13.2312 15.1965 13.4171 15.2325 13.7888L15.2653 14.1272C15.3921 15.4353 15.4554 16.0894 15.0724 16.3801C14.6894 16.6709 14.1137 16.4058 12.9622 15.8756L12.6643 15.7384C12.337 15.5878 12.1734 15.5124 12 15.5124C11.8266 15.5124 11.663 15.5878 11.3357 15.7384L11.0378 15.8756C9.88633 16.4058 9.31059 16.6709 8.92757 16.3801C8.54456 16.0894 8.60794 15.4353 8.7347 14.1272L8.76749 13.7888C8.80351 13.4171 8.82152 13.2312 8.76793 13.0589C8.71434 12.8865 8.59521 12.7472 8.35696 12.4686L8.14005 12.215C7.30162 11.2345 6.88241 10.7443 7.02871 10.2739C7.17501 9.80341 7.78994 9.66427 9.01977 9.38601L9.33794 9.31402C9.68743 9.23495 9.86217 9.19541 10.0025 9.0889C10.1428 8.98239 10.2328 8.82097 10.4127 8.49812Z"
+              fill="rgba(255, 255, 255, 1)"
+            />
+          </svg>
+        </div>
+        <div
+          class="flex flex-wrap gap-4.5 items-center justify-center w-full gap-y-8"
+        >
+          <div
+            class="flex flex-col h-[218px] justify-between p-5.5 bg-[#040404] rounded-[6px] max-w-[468px] w-full"
+            data-aos="fade-up"
+          >
+            <div class="flex w-full justify-between items-center">
+              <div class="flex items-center gap-3">
+                <img src="./assets/img/logo-1.png" alt="" />
+                <div class="flex flex-col">
+                  <span
+                    class="text-lg leading-[125%] tracking-[-0.04em] text-white"
+                  >
+                    @CryptoNomad
+                  </span>
+                  <p
+                    class="text-[#A6A6A6] text-lg leading-[125%] tracking-[-0.04em]"
+                  >
+                    Early user
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-green-light/12 py-1.5 px-3 border border-black rounded-[4px]"
+              >
+                <span
+                  class="text-green-light text-lg leading-[125%] tracking-[-0.04em]"
+                >
+                  From the community
+                </span>
+              </div>
+            </div>
+            <div>
+              <span
+                class="text-white/25 tracking-[-0.02em] text-lg leading-[150%]"
+              >
+                Elunor transformed my trading! Spotted my FOMO habits and fixed
+                my exits. Now I'm up 30%—AI knows me better than I do.
+              </span>
+            </div>
+            <div>
+              <span
+                class="text-white font-light text-lg leading-[12%] tracking-[-0.02em]"
+                >Early tester ~2 months</span
+              >
+            </div>
+          </div>
+          <div
+            class="flex flex-col h-[218px] justify-between p-5.5 bg-[#040404] rounded-[6px] max-w-[468px] w-full"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="flex w-full justify-between items-center">
+              <div class="flex items-center gap-3">
+                <img src="./assets/img/logo-2.png" alt="" />
+                <div class="flex flex-col">
+                  <span
+                    class="text-lg leading-[125%] tracking-[-0.04em] text-white"
+                  >
+                    @SolanaSniper
+                  </span>
+                  <p
+                    class="text-[#A6A6A6] text-lg leading-[125%] tracking-[-0.04em]"
+                  >
+                    Early user
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-green-light/12 py-1.5 px-3 border border-black rounded-[4px]"
+              >
+                <span
+                  class="text-green-light text-lg leading-[125%] tracking-[-0.04em]"
+                >
+                  Personal take
+                </span>
+              </div>
+            </div>
+            <div>
+              <span
+                class="text-white/25 tracking-[-0.02em] text-lg leading-[150%]"
+              >
+                Auto-trade mode is a game-changer. Let it run while I sleep, and
+                wake up to profit. Scary how accurate it is.
+              </span>
+            </div>
+
+            <div>
+              <span
+                class="text-white font-light text-lg leading-[12%] tracking-[-0.02em]"
+                >Using for 2 weeks</span
+              >
+            </div>
+          </div>
+          <div
+            class="flex flex-col h-[218px] justify-between p-5.5 bg-[#040404] rounded-[6px] max-w-[468px] w-full"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="flex w-full justify-between items-center">
+              <div class="flex items-center gap-3">
+                <img src="./assets/img/logo-3.png" alt="" />
+                <div class="flex flex-col">
+                  <span
+                    class="text-lg leading-[125%] tracking-[-0.04em] text-white"
+                  >
+                    @Degenqueen
+                  </span>
+                  <p
+                    class="text-[#A6A6A6] text-lg leading-[125%] tracking-[-0.04em]"
+                  >
+                    Early user
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-green-light/12 py-1.5 px-3 border border-black rounded-[4px]"
+              >
+                <span
+                  class="text-green-light text-lg leading-[125%] tracking-[-0.04em]"
+                >
+                  Real user insight
+                </span>
+              </div>
+            </div>
+            <div>
+              <span
+                class="text-white/25 tracking-[-0.02em] text-lg leading-[150%]"
+              >
+                Finally, a bot that doesn't just copy whales. It learned my
+                reckless style… then made it smarter. No more rug pulls!
+              </span>
+            </div>
+            <div>
+              <span
+                class="text-white font-light text-lg leading-[12%] tracking-[-0.02em]"
+                >Using since launch ~ 1 month</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="faq"
+        class="flex flex-col gap-8 mt-18 w-full max-w-[1440px] items-center"
+      >
+        <div class="flex items-center gap-2">
+          <span
+            class="text-white text-2xl font-medium tracking-[-0.04em]"
+            data-aos="fade-right"
+          >
+            FAQ
+          </span>
+          <svg
+            data-aos="fade-left"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              opacity="0.5"
+              d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+              fill="rgba(255, 255, 255, 1)"
+            />
+            <path
+              d="M12 7.75C11.3787 7.75 10.875 8.25368 10.875 8.875C10.875 9.28921 10.5392 9.625 10.125 9.625C9.71079 9.625 9.375 9.28921 9.375 8.875C9.375 7.42525 10.5503 6.25 12 6.25C13.4497 6.25 14.625 7.42525 14.625 8.875C14.625 9.58584 14.3415 10.232 13.883 10.704C13.7907 10.7989 13.7027 10.8869 13.6187 10.9708C13.4029 11.1864 13.2138 11.3753 13.0479 11.5885C12.8289 11.8699 12.75 12.0768 12.75 12.25V13C12.75 13.4142 12.4142 13.75 12 13.75C11.5858 13.75 11.25 13.4142 11.25 13V12.25C11.25 11.5948 11.555 11.0644 11.8642 10.6672C12.0929 10.3733 12.3804 10.0863 12.6138 9.85346C12.6842 9.78321 12.7496 9.71789 12.807 9.65877C13.0046 9.45543 13.125 9.18004 13.125 8.875C13.125 8.25368 12.6213 7.75 12 7.75Z"
+              fill="rgba(255, 255, 255, 1)"
+            />
+            <path
+              d="M12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17Z"
+              fill="rgba(255, 255, 255, 1)"
+            />
+          </svg>
+        </div>
+        <div
+          class="flex flex-col gap-3 items-center justify-center w-full"
+          id="faqList"
+        >
+          <div
+            class="flex flex-col p-[25px] gap-3 bg-[#020202] border border-white/2 rounded-[12px] max-w-[668px] w-full cursor-pointer hover:bg-gray-06 transition-colors duration-500 ease-in-out"
+            data-aos="fade-up"
+          >
+            <div class="flex justify-between">
+              <span class="font-medium text-white text-lg font-inter">
+                What is Elunor?
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+              >
+                <path
+                  d="M8.16003 11.1945L10.9152 14.132C11.052 14.284 11.2194 14.4057 11.4063 14.4889C11.5931 14.5721 11.7955 14.6152 12 14.6152C12.2046 14.6152 12.407 14.5721 12.5938 14.4889C12.7807 14.4057 12.948 14.284 13.0848 14.132L15.84 11.1945"
+                  stroke="white"
+                  stroke-opacity="0.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M3.35999 17.3768V7.77682C3.35999 5.65598 5.07921 3.93682 7.19999 3.93682H16.8C18.9207 3.93682 20.64 5.65598 20.64 7.77682V17.3768C20.64 19.4976 18.9207 21.2168 16.8 21.2168H7.19999C5.07921 21.2168 3.35999 19.4976 3.35999 17.3768Z"
+                  stroke="white"
+                  stroke-opacity="0.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="flex hidden">
+              <span
+                class="text-white/30 text-lg leading-[150%] tracking-[-0.04em]"
+              >
+                An intelligent Telegram bot that analyzes your trading behavior,
+                identifies your mistakes, and evolves to trade better than you
+                do — based on your own data
+              </span>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col p-[25px] gap-3 bg-[#020202] border border-white/2 rounded-[12px] max-w-[668px] w-full cursor-pointer hover:bg-gray-06 transition-colors duration-500 ease-in-out"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="flex justify-between">
+              <span class="font-medium text-white text-lg font-inter">
+                How is it different from other bots?
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+              >
+                <path
+                  d="M8.16003 11.1945L10.9152 14.132C11.052 14.284 11.2194 14.4057 11.4063 14.4889C11.5931 14.5721 11.7955 14.6152 12 14.6152C12.2046 14.6152 12.407 14.5721 12.5938 14.4889C12.7807 14.4057 12.948 14.284 13.0848 14.132L15.84 11.1945"
+                  stroke="white"
+                  stroke-opacity="0.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M3.35999 17.3768V7.77682C3.35999 5.65598 5.07921 3.93682 7.19999 3.93682H16.8C18.9207 3.93682 20.64 5.65598 20.64 7.77682V17.3768C20.64 19.4976 18.9207 21.2168 16.8 21.2168H7.19999C5.07921 21.2168 3.35999 19.4976 3.35999 17.3768Z"
+                  stroke="white"
+                  stroke-opacity="0.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="flex hidden">
+              <span
+                class="text-white/30 text-lg leading-[150%] tracking-[-0.04em]"
+              >
+                It doesn't copy other traders or push external signals. Elunor
+                learns from your own trades, creating a strategy rooted in your
+                habits — minus the flaws.
+              </span>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col p-[25px] gap-3 bg-[#020202] border border-white/2 rounded-[12px] max-w-[668px] w-full cursor-pointer hover:bg-gray-06 transition-colors duration-500 ease-in-out"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="flex justify-between">
+              <span class="font-medium text-white text-lg font-inter">
+                How does it detect bad tokens?
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+              >
+                <path
+                  d="M8.16003 11.1945L10.9152 14.132C11.052 14.284 11.2194 14.4057 11.4063 14.4889C11.5931 14.5721 11.7955 14.6152 12 14.6152C12.2046 14.6152 12.407 14.5721 12.5938 14.4889C12.7807 14.4057 12.948 14.284 13.0848 14.132L15.84 11.1945"
+                  stroke="white"
+                  stroke-opacity="0.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M3.35999 17.3768V7.77682C3.35999 5.65598 5.07921 3.93682 7.19999 3.93682H16.8C18.9207 3.93682 20.64 5.65598 20.64 7.77682V17.3768C20.64 19.4976 18.9207 21.2168 16.8 21.2168H7.19999C5.07921 21.2168 3.35999 19.4976 3.35999 17.3768Z"
+                  stroke="white"
+                  stroke-opacity="0.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="flex hidden">
+              <span
+                class="text-white/30 text-lg leading-[150%] tracking-[-0.04em]"
+              >
+                By parsing Twitter, Telegram, and project websites. It checks
+                reputation, contract history, bot activity, and previous
+                relaunch patterns.
+              </span>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col p-[25px] gap-3 bg-[#020202] border border-white/2 rounded-[12px] max-w-[668px] w-full cursor-pointer hover:bg-gray-06 transition-colors duration-500 ease-in-out"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="flex justify-between">
+              <span class="font-medium text-white text-lg font-inter">
+                Does it really trade on its own?
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+              >
+                <path
+                  d="M8.16003 11.1945L10.9152 14.132C11.052 14.284 11.2194 14.4057 11.4063 14.4889C11.5931 14.5721 11.7955 14.6152 12 14.6152C12.2046 14.6152 12.407 14.5721 12.5938 14.4889C12.7807 14.4057 12.948 14.284 13.0848 14.132L15.84 11.1945"
+                  stroke="white"
+                  stroke-opacity="0.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M3.35999 17.3768V7.77682C3.35999 5.65598 5.07921 3.93682 7.19999 3.93682H16.8C18.9207 3.93682 20.64 5.65598 20.64 7.77682V17.3768C20.64 19.4976 18.9207 21.2168 16.8 21.2168H7.19999C5.07921 21.2168 3.35999 19.4976 3.35999 17.3768Z"
+                  stroke="white"
+                  stroke-opacity="0.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="flex hidden">
+              <span
+                class="text-white/30 text-lg leading-[150%] tracking-[-0.04em]"
+              >
+                Yes. Once the system learns your style, you can activate
+                auto-trade. Elunor will enter and exit positions on its own —
+                and explain every decision.
+              </span>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col p-[25px] gap-3 bg-[#020202] border border-white/2 rounded-[12px] max-w-[668px] w-full cursor-pointer hover:bg-gray-06 transition-colors duration-500 ease-in-out"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="flex justify-between">
+              <span class="font-medium text-white text-lg font-inter">
+                Is connecting a wallet safe?
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+              >
+                <path
+                  d="M8.16003 11.1945L10.9152 14.132C11.052 14.284 11.2194 14.4057 11.4063 14.4889C11.5931 14.5721 11.7955 14.6152 12 14.6152C12.2046 14.6152 12.407 14.5721 12.5938 14.4889C12.7807 14.4057 12.948 14.284 13.0848 14.132L15.84 11.1945"
+                  stroke="white"
+                  stroke-opacity="0.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M3.35999 17.3768V7.77682C3.35999 5.65598 5.07921 3.93682 7.19999 3.93682H16.8C18.9207 3.93682 20.64 5.65598 20.64 7.77682V17.3768C20.64 19.4976 18.9207 21.2168 16.8 21.2168H7.19999C5.07921 21.2168 3.35999 19.4976 3.35999 17.3768Z"
+                  stroke="white"
+                  stroke-opacity="0.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="flex hidden">
+              <span
+                class="text-white/30 text-lg leading-[150%] tracking-[-0.04em]"
+              >
+                A private key is required for trade analysis and automation.
+                Elunor never shares or stores keys externally — all processing
+                is local to the system.
+              </span>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col p-[25px] gap-3 bg-[#020202] border border-white/2 rounded-[12px] max-w-[668px] w-full cursor-pointer hover:bg-gray-06 transition-colors duration-500 ease-in-out"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="flex justify-between">
+              <span class="font-medium text-white text-lg font-inter">
+                DWhat about safety?
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+              >
+                <path
+                  d="M8.16003 11.1945L10.9152 14.132C11.052 14.284 11.2194 14.4057 11.4063 14.4889C11.5931 14.5721 11.7955 14.6152 12 14.6152C12.2046 14.6152 12.407 14.5721 12.5938 14.4889C12.7807 14.4057 12.948 14.284 13.0848 14.132L15.84 11.1945"
+                  stroke="white"
+                  stroke-opacity="0.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M3.35999 17.3768V7.77682C3.35999 5.65598 5.07921 3.93682 7.19999 3.93682H16.8C18.9207 3.93682 20.64 5.65598 20.64 7.77682V17.3768C20.64 19.4976 18.9207 21.2168 16.8 21.2168H7.19999C5.07921 21.2168 3.35999 19.4976 3.35999 17.3768Z"
+                  stroke="white"
+                  stroke-opacity="0.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="flex hidden">
+              <span
+                class="text-white/30 text-lg leading-[150%] tracking-[-0.04em]"
+              >
+                KOYA checks contract mint functions, renounce status, LP lock,
+                sniper wallets, and abnormal bot or wallet activity.
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer
+      class="flex justify-between max-w-[1440px] w-full mt-[72px] mb-[113px]"
+    >
+      <div class="flex items-center justify-between gap-3">
+        <img src="./assets/img/logo.svg" alt="logo" class="w-10 h-10" />
+        <span class="text-xl font-medium text-white tracking-[-0.04em]">
+          Elunor
+        </span>
+      </div>
+      <button
+        class="cursor-pointer py-2.5 px-4 rounded-xl customBorder bg-black"
+        onclick="window.location.href=config.url"
+      >
+        <span class="text-white text-lg font-medium tracking-[-0.04em]">
+          Connect wallet
+        </span>
+      </button>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // Обработчик клика по каждому блоку FAQ
+        $("#faqList > .flex").click(function () {
+          const parent = $(this); // текущий блок FAQ
+          const answerContainer = parent.find(".flex.hidden"); // блок с ответом
+
+          if (parent.hasClass("active")) {
+            // Если активен — закрываем
+            answerContainer.slideUp(300);
+            parent.removeClass("active");
+          } else {
+            // Если не активен — открываем
+            answerContainer.slideDown(300);
+            parent.addClass("active");
+          }
+        });
+      });
+    </script>
+
+    <script src="./assets/js/config.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/loader.js"></script>
+  </body>
+</html>
